@@ -1,0 +1,25 @@
+<p>Find me in views/hello_redis.erb</p>
+
+<details>
+  <summary>See more details about ERB (Embedded RuBy)</summary>
+  <p><a href="https://docs.ruby-lang.org/en/2.3.0/ERB.html" target="_blank">ERB (Embedded RuBy)</a> allows templates such as this file to evaluate Ruby code and generate an html (or json, xml, etc.).</p>
+
+  <h2>Example of code ran with Ruby:</h2>
+
+  <% current_time_in_utc = Time.now() #the variable is assigned to be use later, but there is no output produced %>
+  <p>The current UTC time is: <%= current_time_in_utc %></p>
+  <p>The current MST time is: <%= current_time_in_utc + Time.zone_offset('MST') %></p>
+
+  <hr/>
+</details>
+
+<h1>Redis Output:</h1>
+<p>This is request number: <%= request_number %></p>
+
+<p>List of request timestamps:</p>
+
+<ul>
+<% list_of_request_timestamps.each do |request_timestamp| %>
+  <li><%= request_timestamp %></li>
+<% end %>
+</ul>

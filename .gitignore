@@ -1,0 +1,5 @@
+# environment/project settings for this VM
+.vagrant/
+
+# Environmental variables and credentials should remain private
+.env
